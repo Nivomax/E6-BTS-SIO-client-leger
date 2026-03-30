@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JH Drivers - VTC premium à Paris. Service de transport privé haut de gamme, fiable et élégant. Demandez votre devis en ligne.">
+  <title>JH Drivers | VTC Premium Paris</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="nav__left">
+        <a href="index.html"><img src="assets/img/logo-jhdrivers.svg" alt="JH Drivers Logo" class="logo"></a>
+        <span class="nav__phone" style="font-weight:600;font-size:1.08rem;margin-left:2vw;color:#222;white-space:nowrap;">06 12 34 56 78</span>
+      </div>
+      <div class="nav__right">
+        <ul class="nav__menu">
+          <li><a href="notre-flotte.html">Notre flotte</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="devenir-partenaire.html">Devenir partenaire</a></li>
+        </ul>
+        <div class="nav__lang">
+          <select id="lang-select">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <a href="#devis" class="btn btn--cta">Réserver</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero hero--fullform">
+      <form class="form-devis form-devis--full" id="devis" autocomplete="off">
+        <h3 class="form-title-left">Réserver une course</h3>
+        <div class="form-row form-row--4col">
+          <input type="text" name="nom" placeholder="Nom" required>
+          <input type="text" name="prenom" placeholder="Prénom" required>
+          <input type="tel" name="telephone" placeholder="Téléphone" required>
+          <input type="email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-row form-row--trajet">
+          <div class="trajet-choices" style="width:100%">
+            <button type="button" class="btn btn--choice trajet-btn" data-value="transfert">Transfert</button>
+            <button type="button" class="btn btn--choice trajet-btn" data-value="evenement">Evènement</button>
+            <button type="button" class="btn btn--choice trajet-btn" data-value="longue-distance">Longue distance</button>
+            <button type="button" class="btn btn--choice trajet-btn" data-value="deplacement-pro">Déplacement professionnel</button>
+            <button type="button" class="btn btn--choice trajet-btn" data-value="chauffeur-journee">Chauffeur à la demi journée</button>
+            <button type="button" class="btn btn--choice trajet-btn" data-value="chauffeur-journee">Chauffeur à la journée</button>
+          </div>
+          <input type="hidden" name="type_trajet" id="type_trajet" value="aller-simple" required>
+        </div>
+        <div class="form-row form-row--vehicules">
+          <div class="vehicule-choices vehicule-choices--fullwidth">
+            <button type="button" class="vehicule-card-btn vehicule-btn" data-value="berline">
+              <img src="assets/img/Berline1.jpg" alt="Berline">
+              <span class="nom-vehicule-form">Berline</span>
+            </button>
+            <button type="button" class="vehicule-card-btn vehicule-btn" data-value="moto">
+              <img src="assets/img/moto1.jpg" alt="Moto">
+              <span class="nom-vehicule-form">Moto</span>
+            </button>
+            <button type="button" class="vehicule-card-btn vehicule-btn" data-value="van">
+              <img src="assets/img/van1.jpg" alt="Van">
+              <span class="nom-vehicule-form">Van</span>
+            </button>
+            <button type="button" class="vehicule-card-btn vehicule-btn" data-value="sprinter">
+              <img src="assets/img/sprinter1.webp" alt="Sprinter">
+              <span class="nom-vehicule-form">Sprinter</span>
+            </button>
+            <button type="button" class="vehicule-card-btn vehicule-btn" data-value="minibus">
+              <img src="assets/img/bus1.jpeg" alt="Minibus">
+              <span class="nom-vehicule-form">Minibus</span>
+            </button>
+            <button type="button" class="vehicule-card-btn vehicule-btn" data-value="limousine">
+              <img src="assets/img/limousine1.webp" alt="Limousine">
+              <span class="nom-vehicule-form">Limousine</span>
+            </button>
+          </div>
+          <input type="hidden" name="vehicule" id="vehicule" required>
+        </div>
+        <div class="form-row form-row--2col">
+          <input type="text" name="adresse_depart" placeholder="Adresse de prise en charge" required>
+          <input type="text" name="adresse_arrivee" placeholder="Adresse de dépôt" required>
+          <input type="date" name="date_depart" placeholder="Date de prise en charge" required>
+          <input type="time" name="heure_depart" placeholder="Heure de prise en charge" required>
+        </div>
+        <div class="form-row form-row--message">
+          <textarea name="message" placeholder="Information complémentaire : siège enfant..."></textarea>
+        </div>
+        <div class="form-row form-row--submit">
+          <button type="submit" class="btn btn--submit">Confirmer la réservation</button>
+        </div>
+        <div class="form-row retour-fields" style="display:none;">
+        <!-- champs retour supprimés -->
+        <div class="form-row">
+        <!-- options supprimées -->
+      </form>
+    </section>
+    <!-- Notre flotte Section -->
+    <section class="flotte-section">
+      <h2 class="section-title">Notre flotte</h2>
+      <div class="flotte-cards">
+        <div class="flotte-card">
+          <img src="assets/img/Berline1.jpg" alt="Berline premium">
+          <h3>Berline</h3>
+          <p>Confort, élégance et discrétion. Idéal pour vos déplacements professionnels ou privés.</p>
+          <span>1-3 passagers</span>
+        </div>
+        <div class="flotte-card">
+          <img src="assets/img/van1.jpg" alt="Van premium">
+          <h3>Van</h3>
+          <p>Parfait pour les groupes ou familles. Espace, sécurité et raffinement.</p>
+          <span>1-7 passagers</span>
+        </div>
+        <div class="flotte-card">
+          <img src="assets/img/moto1.jpg" alt="Moto premium">
+          <h3>Moto</h3>
+          <p>Pour vos trajets rapides et urbains, avec style et efficacité.</p>
+          <span>1 passager</span>
+        </div>
+        <div class="flotte-card">
+          <img src="assets/img/sprinter1.webp" alt="Sprinter premium">
+          <h3>Sprinter</h3>
+          <p>Idéal pour les groupes importants ou événements. Grand confort et modularité.</p>
+          <span>1-16 passagers</span>
+        </div>
+        <div class="flotte-card">
+          <img src="assets/img/bus1.jpeg" alt="Minibus premium">
+          <h3>Minibus</h3>
+          <p>Pour les transferts de groupes, séminaires ou excursions.</p>
+          <span>1-19 passagers</span>
+        </div>
+        <div class="flotte-card">
+          <img src="assets/img/limousine1.webp" alt="Limousine premium">
+          <h3>Limousine</h3>
+          <p>Le summum du luxe et de la distinction pour vos occasions spéciales.</p>
+          <span>1-8 passagers</span>
+        </div>
+      </div>
+    </section>
+    <!-- Nos prestations Section -->
+    <section class="prestations-section">
+      <h2 class="section-title">Nos prestations</h2>
+      <div class="prestations-cards">
+        <div class="prestation-card">
+          <h3>Transfert</h3>
+          <p>Transferts aéroports, gares, hôtels, domicile, entreprises, etc.</p>
+        </div>
+        <div class="prestation-card">
+          <h3>Événement / Mariage</h3>
+          <p>Service sur-mesure pour vos événements, mariages, anniversaires.</p>
+        </div>
+        <div class="prestation-card">
+          <h3>Chauffeur à la journée</h3>
+          <p>Chauffeur dédié pour la journée ou demi-journée, selon vos besoins.</p>
+        </div>
+        <div class="prestation-card">
+          <h3>Longue distance</h3>
+          <p>Déplacements longue distance en France et en Europe.</p>
+        </div>
+        <div class="prestation-card">
+          <h3>Déplacement professionnel</h3>
+          <p>Service premium pour vos rendez-vous et déplacements d’affaires.</p>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Quels sont les avantages de JH Drivers ?</button>
+          <div class="faq-answer">Service haut de gamme, chauffeurs expérimentés, véhicules prestigieux, ponctualité et discrétion.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Comment réserver un trajet ?</button>
+          <div class="faq-answer">Remplissez le formulaire de devis ou contactez-nous directement par téléphone ou email.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Quels types de véhicules proposez-vous ?</button>
+          <div class="faq-answer">Berline, Van, Moto, Sprinter, Minibus, Limousine.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Vos chauffeurs parlent-ils anglais ?</button>
+          <div class="faq-answer">Oui, tous nos chauffeurs sont bilingues français/anglais.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Proposez-vous des services pour entreprises ?</button>
+          <div class="faq-answer">Oui, nous proposons des solutions sur-mesure pour les entreprises et professionnels.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__left">
+      <img src="assets/img/logo-jhdrivers.svg" alt="JH Drivers Logo" class="logo">
+      <div class="footer__contact">
+        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+        <a href="mailto:contact@jhdrivers.com">contact@jhdrivers.com</a>
+      </div>
+    </div>
+    <div class="footer__right">
+      <ul class="footer__links">
+        <li><a href="mentions-legales.html">Mentions légales</a></li>
+        <li><a href="cookies.html">Paramètres des cookies</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+      </ul>
+    </div>
+  </footer>
+    <button id="backToTop" aria-label="Retour en haut" title="Retour en haut">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="14" cy="14" r="14" fill="#ededed"/>
+        <path d="M9 16l5-5 5 5" stroke="#232323" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
