@@ -2,6 +2,34 @@
 // Gestion du formulaire de devis, FAQ, responsive menu, etc.
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Message de confirmation Formspree (formulaire index)
+    const devisForm = document.getElementById('devis');
+    const formSuccessMsg = document.getElementById('form-success-message');
+    if (devisForm && formSuccessMsg) {
+      devisForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const formData = new FormData(devisForm);
+        fetch('https://formspree.io/f/mojpnaqy', {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          if (response.ok) {
+            devisForm.style.display = 'none';
+            formSuccessMsg.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            return response.json().then(data => {
+              alert(data.errors ? data.errors.map(e => e.message).join('\n') : 'Erreur lors de l\'envoi.');
+            });
+          }
+        })
+        .catch(() => {
+          alert('Erreur lors de l\'envoi du formulaire.');
+        });
+      });
+    }
   // Gestion boutons exclusifs type de trajet (un seul sélectionné)
   const trajetBtns = document.querySelectorAll('.trajet-btn');
   const typeTrajetInput = document.getElementById('type_trajet');
@@ -44,16 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Formulaires : message d'envoi (simulation)
   document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Votre demande a bien été envoyée. Merci !');
-      form.reset();
-      // Masquer champs retour si besoin
-      if (typeTrajet) {
-        retourFields.forEach(el => el.style.display = 'none');
-        document.querySelectorAll('.retour-fields[type="text"]').forEach(el => el.style.display = 'none');
-      }
-    });
+    // On retire la gestion du submit ici pour permettre l'envoi réel via Formspree
+    // Si vous souhaitez garder une confirmation personnalisée, utilisez l'événement 'onsubmit' côté HTML ou gérez la réponse Formspree côté JS.
   });
 
   // Sélecteur de langue (simulation)

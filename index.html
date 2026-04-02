@@ -18,15 +18,10 @@
       <div class="nav__right">
         <ul class="nav__menu">
           <li><a href="notre-flotte.html">Notre flotte</a></li>
+          <li><a href="prestations.html">Nos prestations</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="devenir-partenaire.html">Devenir partenaire</a></li>
         </ul>
-        <div class="nav__lang">
-          <select id="lang-select">
-            <option value="fr">Français</option>
-            <option value="en">English</option>
-          </select>
-        </div>
         <a href="#devis" class="btn btn--cta">Réserver</a>
       </div>
     </nav>
@@ -34,7 +29,8 @@
   <main>
     <!-- Hero Section -->
     <section class="hero hero--fullform">
-      <form class="form-devis form-devis--full" id="devis" autocomplete="off">
+        <div id="form-success-message" style="display:none;color:green;font-weight:bold;font-size:1.2em;margin-bottom:1em;text-align:center;">Votre Prise de rendez-vous a bien été enregistrée. Vous serez contacté(e) très prochainement par message. Merci pour votre confiance !</div>
+        <form class="form-devis form-devis--full" id="devis" autocomplete="off">
         <h3 class="form-title-left">Réserver une course</h3>
         <div class="form-row form-row--4col">
           <input type="text" name="nom" placeholder="Nom" required>

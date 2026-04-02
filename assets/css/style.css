@@ -1,3 +1,17 @@
+/* Affichage forcé du message de confirmation */
+#form-success-message {
+  display: none;
+  color: #1a7f1a;
+  background: #eafbe7;
+  border: 1px solid #b6e2b6;
+  border-radius: 8px;
+  padding: 1em 2em;
+  margin: 2em auto 1em auto;
+  max-width: 500px;
+  font-size: 1.2em;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
 .form-title-left {
   text-align: left;
   margin-left: 0;
